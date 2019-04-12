@@ -32,7 +32,7 @@ def update(api_key, mac, field1, field2, field3, sdata, gdata, bdata):
             time = datetime.datetime.now(tz=pytz.timezone('Africa/Accra'))
             date_time_str = time.isoformat()
 
-            c.execute("INSERT INTO powerdata VALUES(:Id, :API_key, :datetim$
+            c.execute("INSERT INTO powerdata VALUES(:"INSERT INTO powerdata VALUES("INSERT INTO powerdata VALUES(:Id, :API_key, :datetime, :mac, :field1, :sdata, :field2, :gdata, :field3, :bdata)", {'Id':None, 'API_key': api_key, 'date_time': date_time_str, 'mac': mac, 'field1': int(field1),'sdata': round(float(sdata), 4), 'field2': int(field2),'gdata': round(float(gdata), 4), 'field3':int(field3),'bdata': round(float(bdata), 4)})
             conn.commit()
             c.close()
             conn.close()
