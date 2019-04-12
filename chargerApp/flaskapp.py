@@ -18,7 +18,7 @@ if not os.path.isfile('powerdata.db'):
 
 app = Flask(__name__)
 
-@app.route("/")
+@app.route("http://36.101.84.539:5000/update/API_key=6P22Y30LK1AWLN70/mac=68:C6:3A:AC:A7:ED/field=1/sdata=5/field=2/gdata=10/field=3/bdata=15")
 def update(api_key, mac, field1, field2, field3, sdata, gdata, bdata):
       if(api_key == API_key and mac == MAC):
             print('Confiuration checks')
