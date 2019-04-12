@@ -36,6 +36,11 @@ def update(api_key, mac, field1, field2, field3, sdata, gdata, bdata):
             conn.commit()
             c.close()
             conn.close()
+                      
+            return render_template("recent.html", data= data[0], time_stamp = date_time_str)
+       else:
+            return render_template("error.html")
+
 
 
 if __name__ == "__main__":
